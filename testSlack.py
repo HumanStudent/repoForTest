@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from slack.errors import SlackApiError
 
 
-env_path = Path('.') / '.varFileEnv'
+env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
 client = WebClient(token=os.environ['BOB_THE_BOT_TOKEN'])
 client.chat_postMessage(channel='#testbotbot', text="hello again ")
